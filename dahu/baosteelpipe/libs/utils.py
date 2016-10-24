@@ -24,7 +24,7 @@ import cgi
 import math
 import redis
 from tornado.httpclient import HTTPRequest
-from concurrent import futures
+# from concurrent import futures
 import logging
 import zipfile
 import re
@@ -452,8 +452,8 @@ def format_print_string(string,size):
 
     return str_array
 
-def get_concurrent_pool():
-    return futures.ThreadPoolExecutor(4)
+# def get_concurrent_pool():
+#     return futures.ThreadPoolExecutor(4)
 
 # move by niyoufa
 # move from app.py on 2016.07.13

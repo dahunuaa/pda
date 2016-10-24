@@ -9,8 +9,8 @@ import hashlib
 from tornado import escape
 from tornado.options import options
 from tornado.web import RequestHandler as BaseRequestHandler, HTTPError
-from dhui100 import exceptions
-from dhui100.libs import utils
+from baosteelpipe import exceptions
+from baosteelpipe.libs import utils
 
 class BaseHandler(BaseRequestHandler):
     def get(self, *args, **kwargs):
@@ -121,10 +121,10 @@ class APIHandler(BaseHandler):
 '''
 
 #带加密字段的处理器
-class TokenAPIHandler(APIHandler):
-    @utils.add_token
-    def __init__(self,*args,**kwargs):
-        super(TokenAPIHandler,self).__init__(*args,**kwargs)
+# class TokenAPIHandler(APIHandler):
+#     @utils.add_token
+#     def __init__(self,*args,**kwargs):
+#         super(TokenAPIHandler,self).__init__(*args,**kwargs)
 
 class ErrorHandler(RequestHandler):
     """Default 404: Not Found handler."""
